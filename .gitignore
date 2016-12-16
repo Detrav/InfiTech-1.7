@@ -109,6 +109,6 @@ config/BlockProperties.defaults/*
 
 # Non essential/custom mods
 mods/FullscreenWindowed*.*
-mods/OptiFine*.*
+#mods/OptiFine*.*
 mods/VersionChecker*.*
 mods/clearchat*.*
