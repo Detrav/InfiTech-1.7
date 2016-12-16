@@ -3,3 +3,9 @@
 
 # Files that will have LF ending always
 config/PneumaticCraft/*.cfg eol=lf
+
+*.txt text=auto
+*.ini text=auto
+*.json text=auto
+*.cfg text=auto
+*.lang text=auto

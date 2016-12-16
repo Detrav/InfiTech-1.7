@@ -1,0 +1,2325 @@
+{
+  "name": "Bronze Age",
+  "description": "Bronze (or Tool) Age is the beginning of your journey into the world of InfiTech. The primary materials that you will use here are Bronze and Iron. This set will walk you through mining, making tools and early use of Steam to process materials. The main ores you will be looking for are Chalcopyrite (Copper), Limonite (Iron) and Cassiterite (Tin). Oh and before I forget: Tin might be bit harder to find, just be patient and maybe bring a friend to help you out.",
+  "quests": [
+    {
+      "name": "Tooling Up",
+      "description": "\"If I\u0027m going to survive in this place my first order of business must be the construction of reliable tools. My initial efforts have yielded little success: wood and stone tools are less reliable than I remember. Perhaps if I were to try something with a bit more durability and edge, such as Flint, I\u0027d spend less time making tools and more time making...whatever I\u0027ll need to make next.\"",
+      "x": 74,
+      "y": 91,
+      "bigicon": true,
+      "icon": {
+        "id": "minecraft:flint"
+      },
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Flint Tools",
+          "longDescription": "Pickaxes have \"mining levels\", and Flint tools are mining level 1.  Soon you will learn what material is needed for mining certain ores. Flint tools already have the special property \"Fire Aspect I\", which will cause your enemies to burn. Just be careful when hitting zombies with it: if they hit you back whilst on fire, you may catch fire as well.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 2,
+                "nbt": "{GT.ToolStats:{PrimaryMaterial:\"Flint\",MaxDamage:6400L,SecondaryMaterial:\"Wood\"}}"
+              }
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "nbt": "{ench:[0:{lvl:1s,id:20s}],GT.ToolStats:{PrimaryMaterial:\"Flint\",MaxDamage:6400L,SecondaryMaterial:\"Wood\"}}"
+              }
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 6,
+                "nbt": "{ench:[0:{lvl:1s,id:20s}],GT.ToolStats:{PrimaryMaterial:\"Flint\",MaxDamage:6400L,SecondaryMaterial:\"Wood\"}}"
+              }
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 4,
+                "nbt": "{GT.ToolStats:{PrimaryMaterial:\"Flint\",MaxDamage:6400L,SecondaryMaterial:\"Wood\"}}"
+              }
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Easy Flint",
+          "longDescription": "By now you\u0027ve probably noticed that the amount of flint you randomly get from flint is quite low. A remedy for this is the Mortar. Mortars can be used not only for crushing Gravel directly into Flint but also for crushing Ingots into Dusts. Flint mortars don\u0027t have high durability, but as an early tool its handy.",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:flint"
+              },
+              "required": 8
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 24,
+                "nbt": "{GT.ToolStats:{PrimaryMaterial:\"Flint\",MaxDamage:6400L,SecondaryMaterial:\"Stone\"}}"
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 2
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Ore Annoyance",
+      "description": "\"Flint be damned. It\u0027s better than Stone certainly, but I can\u0027t spend the rest of my life scavenging gravel for it.On the other hand, where are all the ores? Occassionally I\u0027ll come across small traces of iron or copper here and there, but nothing substantial. This requires a bit more research.\"",
+      "x": 77,
+      "y": 141,
+      "icon": {
+        "id": "Enchiridion2:book",
+        "nbt": "{identifier:\"GregTech_Ore_Guide\"}"
+      },
+      "prerequisites": [
+        "Tooling Up"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Guide in a book",
+          "longDescription": "Before you begin hunting for specific ores, you should create an OreGen guidebook.  It will help you narrow down where to search.To craft this you need to have at least one block of any ore.",
+          "items": [
+            {
+              "item": {
+                "id": "Enchiridion2:book",
+                "nbt": "{identifier:\"GregTech_Ore_Guide\"}"
+              }
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Plenty of ores",
+          "longDescription": "Now that you\u0027re a bit more familiar with how ores spawn you should go and collect some of the most important and basic ones. Don\u0027t forget to check your Ore Guide Book for information where certain ores spawn. Certain ore names can be confusing. For example: Cassiterite Ore \u003d Tin; Chalcopyrity Ore \u003d Copper; Limonite Ore \u003d Iron.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.blockores",
+                "damage": 535
+              },
+              "required": 6,
+              "precision": "ORE_DICTIONARY"
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.blockores",
+                "damage": 57
+              },
+              "required": 6,
+              "precision": "ORE_DICTIONARY"
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.blockores",
+                "damage": 930
+              },
+              "required": 6,
+              "precision": "ORE_DICTIONARY"
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.blockores",
+                "damage": 855
+              },
+              "required": 6,
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "IC2:itemCoin"
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Growing Crops",
+      "description": "\"Making tools and mining for rare ore veins is all well and good but at some point I need to consider preventing myself from starving to death. I\u0027ve been subsisting until now on whatever I can find: there are berries everywhere, and fruit trees. The occassional foolish animal. But hunting and foraging is taking up too much valuable time. Its time to consider investing time in some actual agriculture.\"",
+      "x": 36,
+      "y": 131,
+      "icon": {
+        "id": "IC2:blockCrop"
+      },
+      "prerequisites": [
+        "Better than collecting Food"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Sticks for crops",
+          "longDescription": "You can get many useful resources from crops.  To begin, you\u0027ll need to combine 4 sticks together to create the crops themselves.",
+          "items": [
+            {
+              "item": {
+                "id": "IC2:blockCrop"
+              },
+              "required": 2
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Handwork Tools",
+      "description": "\"Oh for the love of…. I broke another pick while exploring today.  I\u0027m getting tired of going through my tools so quickly, but I\u0027m having difficulty figuring out how to work more complex metals. Take iron for example: I\u0027ve had no trouble reducing it to ingots.  In fact, as a metal its even more impressive once I break it into nuggets and smelt them a second time.   But I just can\u0027t figure out how to work it into any useful shapes with my bare hands.  I\u0027ll need to devise some other tools to help me manage these metals better.\"",
+      "x": 110,
+      "y": 94,
+      "icon": {
+        "id": "gregtech:gt.metatool.01",
+        "damage": 12
+      },
+      "prerequisites": [
+        "Tooling Up"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Hammering Hard and Soft",
+          "longDescription": "Hard Hammer is used for crafting 2 Ingots into Plate and is necessary for crafting other tools. Other uses of the Hard Hammer are: Toggling if machine can accept automated Fluid and Item input and ore blocks mined by Hammers will drop one Crushed Ore rather than their regular drops. Gem ores will drop one Gem instead. Soft Mallet is used for crafting certain items, like wooden pipes, and for enabling/disabling machines. If you disable machine with your Soft Mallet, it will finish the current process and then it will stop.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 12
+              },
+              "precision": "NBT_FUZZY"
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 14
+              },
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Filling",
+          "longDescription": "The file is necessary for making metal rods, tools and other items that requires sharpening.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 18
+              },
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Wrenching",
+          "longDescription": "Wrench is mainly used for picking up GregTech Machines, but is also broadly used as a tool to rotate the output side of them. In some cases its also used in crafting, for example in hoppers.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 16
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Sawing",
+          "longDescription": "You must have noticed that you only get 2 planks from wooden Logs, and only 2 sticks from wooden planks.  The saw will double this yield. It is also used as an early way of creating bolts, which are then used for making screws.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 10
+              },
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 3
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Better than collecting Food",
+      "description": "\"I woke up this morning and saw the first fruits of my labour growing in the garden. Beautiful! Its only a matter of time now before my foraging days are over. In the meantime I\u0027ll need to figure out how to extract the best nutritional value out of the foods I\u0027m growing.\"",
+      "x": 36,
+      "y": 94,
+      "icon": {
+        "id": "minecraft:bread"
+      },
+      "prerequisites": [
+        "Tooling Up",
+        "Handwork Tools"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Light Food",
+          "longDescription": "You can no longer magically craft three wheat into a piece of bread. To actually make bread you need to first get raw dough. This is easily done by mixing flour (obtained by milling wheat with a Mortar) and a bucket of water. (You may need salt as well.)",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.02",
+                "damage": 32559
+              },
+              "required": 2,
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        },
+        {
+          "type": "CONSUME",
+          "description": "Feed Me!",
+          "longDescription": "Next you just need to cook the dough in a furnace to get buns, or combine 2 doughs and then cook them to get yourself tasty Bread.",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:bread"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Easy Crops",
+      "description": "\"I noticed an odd thing in my garden the other day: Being forgetful, I had accidentally left an empty pair of cropsticks near some other plants, and when I returned later, a vine I didn\u0027t recognize was growing on them. Evidentally the adjacent plants had managed to crossbreed and this mutation occurred as a result. Further experimentation showed that the results were rather random: the exact same test sometimes produced one of the parents, or another mutation, or just useless weeds. Time will tell if any of these plants could be particularly useful to me.\"",
+      "x": 19,
+      "y": 158,
+      "icon": {
+        "id": "gregtech:gt.metaitem.02",
+        "damage": 32530
+      },
+      "prerequisites": [
+        "Growing Crops"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CONSUME",
+          "description": "Growing ores?!",
+          "longDescription": "Breeding new crops is simple: Place crops in the ground with a space between.  Plant a seed on those cropsticks (wheat works, so do many other plants).  When its fully grown, place DOUBLE cropsticks between the two plants.  Eventually something will grow there.  Usually it will be one of the parents, but sometimes, rarely, it will be an entirely new, random plant.  Plant types have \"tiers\", and are most likely to mutate into a plant of a similar tier. Also some crops require metal block underneath the soil for them to fully mature. Like Coppon requires Copper Block, Tine requires Tin Block etc... Be carefull of weeds, it can destroy all your crops.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.02",
+                "damage": 32530
+              },
+              "required": 2
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.02",
+                "damage": 32540
+              },
+              "required": 2
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.02",
+                "damage": 32500
+              },
+              "required": 2
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "IC2:itemCoin",
+          "amount": 3
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Better Crops",
+      "description": "\"Make no mistake: this process is slow as all hell. But I\u0027m breeding plants now that I never even imagined could possibly exist. I have a picture in my mind: a farm as far as the eye can see, producing precious metals such as tin and copper. I\u0027d never have to mine again. Tin and copper...and better things perhaps?\"",
+      "x": 52,
+      "y": 158,
+      "icon": {
+        "id": "gregtech:gt.metaitem.02",
+        "damage": 32511
+      },
+      "prerequisites": [
+        "Growing Crops"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CONSUME",
+          "description": "Ore Farmer",
+          "longDescription": "Keep breeding higher tiers of plants together until you achieve some really useful ones.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.02",
+                "damage": 32503
+              },
+              "required": 2
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.02",
+                "damage": 32504
+              },
+              "required": 2
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.02",
+                "damage": 32510
+              },
+              "required": 2
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.02",
+                "damage": 32511
+              },
+              "required": 2
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "IC2:itemCoin",
+          "amount": 3
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Even more Tools",
+      "description": "\"I keep wasting time with bizarre problems that a pickaxe or hammer aren\u0027t designed to solve.  I\u0027ll need some more precise tools for the occassional cutting and prying work I\u0027ll be doing. The good news is that I\u0027m getting pretty clever with materials, and like most tools I can craft these out of just about anything.\"",
+      "x": 141,
+      "y": 94,
+      "icon": {
+        "id": "gregtech:gt.metatool.01",
+        "damage": 34
+      },
+      "prerequisites": [
+        "Handwork Tools"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Knife, Crowbar, Screwdriver",
+          "longDescription": "Knife: Is used for making bowls, rubber rings and needed for some food. Crowbar: It is mostly a maintenance tool.  You can also use it in the same way as Railcraft Crowbar for rotating and interacting with tracks and carts. Lastly it can be used for opening crates, to remove covers from Gregtech blocks. Screwdriver: Is used in certain crafting recipes. It is also for configuring Integrated Circuits and changing operating modes of GregTech Covers. Cutter: Is a tool used in the crafting of extruder shapes, wires, arrow heads, scoops, plungers...",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 34
+              },
+              "precision": "NBT_FUZZY"
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 20
+              },
+              "precision": "NBT_FUZZY"
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 22
+              },
+              "precision": "NBT_FUZZY"
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 26
+              },
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Branch Cutter, Scoop, Sense",
+          "longDescription": "Branch Cutter: Has 100% drop chance for saplings from vanilla or Forestry leaves. Scoop: Is used as normal forestry scoop, to gather Bees from Forestry Hives. Sense: Harvests a 3x3 area of crops at once.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 30
+              },
+              "precision": "NBT_FUZZY"
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 28
+              },
+              "precision": "ORE_DICTIONARY"
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 40
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Universal Spade",
+          "longDescription": "Universal Spade: It is a multipurpose tool. It combines the functions of the Shovel, Saw, and Crowbar into one tool. However, its durability is consumed twice as quickly as a normal tool\u0027s would.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 32
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 2
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Dirty Endeavors",
+      "description": "\"Mining, mining, mining...I swear that\u0027s all I do these days. I keep learning some unexpected things though.  I had another pickaxe disintegrate in my hands this morning, and after an important bout of cursing I recalled that I was also carrying around a trusty hammer.  I took a swing at a chunk of iron ore, and to my surprise it broke into a pile of crushed ore pieces. I wonder what\u0027s the best way to leverage these.\"",
+      "x": 110,
+      "y": 141,
+      "icon": {
+        "id": "gregtech:gt.metaitem.01",
+        "damage": 3032
+      },
+      "prerequisites": [
+        "Handwork Tools",
+        "Higher Tier Tools"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "parentrequirement": 1,
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Crushed",
+          "longDescription": "You have probably already acquired some crushed ore from small ores during your mining expeditions. If not, try to mine an ore with your hammer: you\u0027ll get crushed ore. When smelted, many crushed ores will turn into 10 nuggets, which is 1 ingot + 1 nugget as a bonus. This doesn\u0027t work for some of the advanced metals. As always, it is best to check NEI recipes to be sure you are processing your ores efficiently.",
+          "items": [
+            {
+              "item": {
+                "id": "IC2:itemCrushedOre"
+              },
+              "required": 5,
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Dirty!",
+          "longDescription": "Other metals will give you only 3 nuggets when smelted in crushed version. So you should craft it into a Dirty Dust, which can be then smelted into 1 ingot. To craft Dirty/Impure dust put the Crushed Ore together with Hard Hammer in your crafting table. Keep in mind, that not every ore is smeltable in furnace. Some of them needs higher temperatures than furnace can supply.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.01",
+                "damage": 3032
+              },
+              "required": 5
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Cleaning",
+      "description": "\"A fair amount of the ores I dig up can apparently just be tossed into a furnace and smelted like that.  But if I ever want to use something precious, such as redstone, or do some metal alloying, I\u0027ll need to clean these dusts first.  Simple enough: I\u0027ll make a big cauldron of water for that.\"",
+      "x": 110,
+      "y": 176,
+      "icon": {
+        "id": "IC2:fluidDistilledWater"
+      },
+      "prerequisites": [
+        "Dirty Endeavors"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Making sink",
+          "longDescription": "To clean any Dirty/Impure dust you must first get yourself a cauldron and fill it with water.",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:cauldron"
+              }
+            },
+            {
+              "item": {
+                "id": "minecraft:bucket"
+              }
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Washed!",
+          "longDescription": "Now just throw Dirty Dust into the cauldron to clean it up. Do note, that you can throw in entire stacks at once, rather than a single dust at a time, to save you the trouble of refilling your cauldron constantly.",
+          "items": [
+            {
+              "item": {
+                "id": "IC2:itemDust",
+                "damage": 5
+              },
+              "required": 5,
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 2
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Dust a Must",
+      "description": "\"I can hardly complain about the metal working I\u0027ve done so far: wrought iron far surpasses the stone and wood I was using what seems like weeks ago. Now, though, I have my mind on some actual machinery, and for that I\u0027ll need something with even more durability and resilience. I\u0027m thinking that combining the properties of tin and copper may do the trick.\"",
+      "x": 155,
+      "y": 122,
+      "bigicon": true,
+      "icon": {
+        "id": "gregtech:gt.metaitem.01",
+        "damage": 11300
+      },
+      "prerequisites": [
+        "Dirty Endeavors"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Combining",
+          "longDescription": "Using a mortar or the grinder turn 3 ingots of copper and 1 ingot of tin into dust. Craft these four dusts together to get three bronze dust, which you can smelt into bronze ingots.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.01",
+                "damage": 2300
+              },
+              "required": 3,
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Catching Bronze",
+          "longDescription": "Now all what remains is just smelt your needed Bronze. Believe me, when I will say you will need a LOT of Bronze.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.01",
+                "damage": 11300
+              },
+              "required": 3,
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 2
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "First Steam",
+      "description": "\"I\u0027ve done it! I\u0027ve created my first metal alloy, and its even better than I expected. Bronze is a bit annoying to make but it seems to last forever. It holds an excellent edge and I\u0027m able to work it into finer shapes. My ambitions are growing. I know I can harness steam now, and automate some of the tedium I\u0027ve become accustomed to. I\u0027ll be able to save tools on hammering, cooking...I think I may even be able to efficiently process ores! This...is going to require an awful, awful lot of bronze.\"",
+      "x": 229,
+      "y": 61,
+      "bigicon": true,
+      "icon": {
+        "id": "gregtech:gt.blockmachines",
+        "damage": 100
+      },
+      "prerequisites": [
+        "Dust a Must"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Boiling",
+          "longDescription": "To create steam the simplest and most basic way is to get yourself a Small Coal Boiler. These little guys will run on Coal to generate heat. I am not going to bore you with calculations but there is one most important thing to keep in mind with any boilers. DO NOT LET THEM RUN OUT OF WATER. If the boiler runs dry... expect explosions. So make sure to supply it with constant water. Tip: The boiler will never output steam from the front face or bottom, so if you pipe your water in on that side you won\u0027t have to worry about steam entering those pipes if the water runs out. Acceptable fuels are: Coal, Coal Dust, Charcoal, Coal Coke, Lignite Coal and Lignite Coal Dust",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.blockmachines",
+                "damage": 100
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Piping",
+          "longDescription": "Wooden pipes are capable of transporting liquids around your base. Since they are made from just wood, they aren\u0027t able to transport Steam. The Steam will leak out from them. Other hot liquids may burn the pipes to dust. To transport hot liquids or steam you should make Small Bronze Pipes. They are substantially better than Wooden ones in every respect. Be advised that fluids can \u0027slosh around\u0027 in pipes, significantly reducing their effective throughput. This can be mitigated in the future with Pumps or, more commonly, Shutter Modules.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.blockmachines",
+                "damage": 5121
+              }
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.blockmachines",
+                "damage": 5101
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 2
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Eco Steam",
+      "description": "Call me crazy, but I can\u0027t help but think there are better ways to make steam. Charcoal isn\u0027t too bad, but it seems to me the sun is creating plenty of heat for free. I\u0027m going to try to take advantage of that.",
+      "x": 232,
+      "y": 19,
+      "icon": {
+        "id": "gregtech:gt.blockmachines",
+        "damage": 105
+      },
+      "prerequisites": [
+        "First Steam"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Solar",
+          "longDescription": "The Simple Solar Boiler is a low-tech boiler that produces Steam from sunlight. Of course it needs to directly see the sun, so make sure that there are no blocks obstructing the view.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.blockmachines",
+                "damage": 105
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 2
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Water from the Sky",
+      "description": "\"Now that I have some basic boilers creating steam for me, I need to figure out a way to supply them with water reliably. That stuff isn\u0027t infinite you know. This also has to be done more...lazily. Running to the lake and back with buckets of water is probably great for my physique but terrible for my timelines. It would be nice to take advantage of the rain.\"",
+      "x": 189,
+      "y": 42,
+      "icon": {
+        "id": "Forestry:factory2",
+        "damage": 1
+      },
+      "prerequisites": [
+        "First Steam"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CONSUME",
+          "description": "Rainy Days",
+          "longDescription": "There are two early game ways to automatically gather water: the forestry raintank and the railcraft water tank. The forestry raintank costs alot of iron to craft and will only collect water while it is raining (assuming you didn\u0027t block its view of the sky), but does so at a decent rate. The railcraft water tank takes a moderate amount of iron and some slimeballs, but will constantly produce water. It produces more water in damper biomes (i.e. the ocean), and while it is raining (again, if it can see the sky) and will automatically output water to any pipes connected to the bottom. The easiest way to complete this quest will be to pipe water into a QDS block, after first selecting this quest and right-clicking the quest book onto the block.",
+          "items": [
+            {
+              "fluid": "water",
+              "required": 2000
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 2
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Double Trouble",
+      "description": "\"I know I\u0027ve considered this previously, but I think I finally know how to do it. I\u0027m fairly sure that a machine with sufficient power behind it, made out of bronze and diamonds, could process my ores so efficiently that I would effectively get twice as much metal per ore. This will make a massive difference to my resource gathering needs.\"",
+      "x": 232,
+      "y": 107,
+      "icon": {
+        "id": "gregtech:gt.blockmachines",
+        "damage": 106
+      },
+      "prerequisites": [
+        "First Steam"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Let\u0027s Macerate",
+          "longDescription": "The Steam Macerator is machine that allows you to break ores into Crushed Ores or ingots into dusts. When you crush an Ore Block you will get double the normal output, which is awesome. The main use for Compressor is making Metal blocks. You cannot compress 9 ingots in your crafting table anymore, you are not that strong. Also one extra use for Compressor is... making diamonds.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.blockmachines",
+                "damage": 115
+              },
+              "precision": "NBT_FUZZY"
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.blockmachines",
+                "damage": 106
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Steam Breaker",
+          "longDescription": "The Steam Hammer functions similar to your regular hammer, but instead of holding the hammer in your hand and using a crafting table, you can automate this process. There is one thing to keep in mind with ALL Steam Machines: their exhaust vent must be unblocked, so use a wrench to rotate the output face of the machine (right-clickk). Otherwise it will stop after the first process. As mentioned before, some of the basic Crushed Ores are better to smelt directly instead of hammering them into dust, since you will get 1 extra nugget by doing that.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.blockmachines",
+                "damage": 112
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 2
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Alloying for Newbs",
+      "description": "\"I can already see that my previous concerns about bronze were understated. When I figured I\u0027d need lots, I think I meant to say piles and piles of the stuff. I need to create bronze more efficiently if I don\u0027t want to spend the rest of my life digging for tin and copper.\"",
+      "x": 199,
+      "y": 127,
+      "icon": {
+        "id": "gregtech:gt.blockmachines",
+        "damage": 118
+      },
+      "prerequisites": [
+        "Double Trouble"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Alloying Machine",
+          "longDescription": "The Steam Alloy Smelter is used to combine (smelt) two metals into another (alloy). As an example, it can be used to combine Copper and Tin into Bronze, and does so more efficiently than Dusts crafted together.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.blockmachines",
+                "damage": 118
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 3
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Better Steam Storage",
+      "description": "Steam is very effective for generating power, but sometimes its difficult to balance the amount I use against the amount I can generate. Perhaps if I buffer it in a large tank, I\u0027ll be able to create and use it more efficiently.",
+      "x": 218,
+      "y": 143,
+      "icon": {
+        "id": "Railcraft:machine.beta",
+        "damage": 2
+      },
+      "prerequisites": [
+        "Alloying for Newbs"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "The Tank",
+          "longDescription": "Railcraft tank is big tank for holding liquids or steam. It composes of three different blocks: Wall, Gauge for a window and Valve. Frame of the tank must be build from Walls. Rest can be either gauge or valve. Size must be 3, 5, 7 or 9 in width and 4 - 8 in height. Tank will automaticaly output its content from the valve at bottom (keep in mind that still the frame must be build from walls).",
+          "items": [
+            {
+              "item": {
+                "id": "Railcraft:machine.beta"
+              },
+              "required": 24
+            },
+            {
+              "item": {
+                "id": "Railcraft:machine.beta",
+                "damage": 1
+              },
+              "required": 8
+            },
+            {
+              "item": {
+                "id": "Railcraft:machine.beta",
+                "damage": 2
+              },
+              "required": 8
+            }
+          ]
+        },
+        {
+          "type": "CONSUME",
+          "description": "Steamy!",
+          "longDescription": "A task where the player can hand in items or fluids. One can also use the Quest Delivery System to submit items and fluids. Since you can\u0027t connect GregTech pipes to QDS, you can either use Fluid Conduit or place the QDS directly on the bottom valve.",
+          "items": [
+            {
+              "fluid": "steam",
+              "required": 10000
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 2
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Steam Machines",
+      "description": "It\u0027s time to put all this steam to better use. All my clever plans with steam machines are starting to become reality, and I strongly suspect I\u0027ll need these things running if I want to progress beyond steam into something better.",
+      "x": 292,
+      "y": 127,
+      "icon": {
+        "id": "gregtech:gt.blockmachines",
+        "damage": 1
+      },
+      "prerequisites": [
+        "Double Trouble"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Extraction!",
+          "longDescription": "Steam Extractor is mainly used for extracting Raw Rubber from Sticky Resin, which can be later Volcanized into normal Rubber.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.blockmachines",
+                "damage": 109
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Cooking with Steam",
+          "longDescription": "Steam Furnace works like a normal furnace.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.blockmachines",
+                "damage": 103
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 2
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Blasting Away",
+      "description": "\"Well its time. I\u0027ve been afraid to even write this down...the scale of my ambition has grown to alarming proportion. I like bronze, honestly I do, but I think I can do something better. Something with good old trusty iron. But its going to take a big machine. A really big machine, requiring a really big amount of bronze. Call me an optimist, but I suspect its gonna be a blast.\"",
+      "x": 242,
+      "y": 143,
+      "icon": {
+        "id": "gregtech:gt.blockmachines",
+        "damage": 108
+      },
+      "prerequisites": [
+        "Steam Machines"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Blast Control",
+          "longDescription": "You will be using a LOT of Steel. To get steel you should first build yourself a Blast Furnace. It is expensive in Bronze; to make all the necessary pieces you will need 2 stacks of clay balls, 32 cobblestone and 6 stacks + 8 bronze ingots.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.blockmachines",
+                "damage": 108
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Plated Bricks",
+          "longDescription": "When you place down the Bronze Blast Furnace it will not work on its own. You must build it into Multiblock. To do that you need 32 Bronze Plated Bricks. The correct pattern can be found in the Blast Furnace block interface, or you can make yourself a BBF Guide Book.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.blockcasings",
+                "damage": 10
+              },
+              "required": 32,
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 3
+        },
+        {
+          "id": "Enchiridion2:book",
+          "nbt": "{identifier:\"GUIDE_Bronze_Blast_Furnace\"}"
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Magical Steel",
+      "description": "\"I\u0027ve been distracted with this notion that there are more than one says to skin a cat.  Or smelt some steel.  Ok, I\u0027ll skin the cat later, and in the meantime, I suspect I could combine pure Ordo essence with iron to create steel.\"",
+      "x": 292,
+      "y": 195,
+      "icon": {
+        "id": "Thaumcraft:blockMetalDevice"
+      },
+      "prerequisites": [
+        "Steam Machines",
+        "{Magic}[Alchemical Dabbling]"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CONSUME",
+          "description": "Ordered Steel",
+          "longDescription": "There is also a way to strengthen iron nuggets with some magic. First you need to actually research that. So open your Thaumonomicon and research your Wrought Iron Transmutation and then Steel one. After that all you need is to throw an wrought iron nugget into a heated crucible (to heat up crucible you need to put something hot underneath it - Lava, start a fire, use Nitor) along with some ordo aspect. Keep an eye out for decent sources of Ordo.  I can recommend using Candleberries, as they contain 1 Ordo and 2 Messis and are a renewable source.",
+          "items": [
+            {
+              "item": {
+                "id": "Railcraft:nugget",
+                "damage": 1
+              },
+              "required": 9,
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 2
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "First Steel",
+      "description": "\"Its alive! Well, its working anyway. I have figured out what is needed to create steel. I don\u0027t care if it\u0027s fast or not, I don\u0027t care if it\u0027s magic or science. I am making flippin\u0027 steel. Now its just a question of how much of it I can make: I suspect I\u0027ll need an awful lot.\"",
+      "x": 263,
+      "y": 165,
+      "bigicon": true,
+      "icon": {
+        "id": "gregtech:gt.metaitem.01",
+        "damage": 11305
+      },
+      "prerequisites": [
+        "Blasting Away",
+        "Magical Steel"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "parentrequirement": 1,
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Stee(a)ling!",
+          "longDescription": "Ready to make \"some\" steel? You can use either ways to make them. Arcane Transmutation? Or classical Blast Furnace? Or both? It is entirely up to you, what will suit you the best.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.01",
+                "damage": 11305
+              },
+              "required": 16,
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 3
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Hell Lands",
+      "description": "\"A terrible vision came to me in my sleep last night.  I saw a grim, dark place. And fire everywhere I looked. Oceans of lava...even creatures of flame. And when I awoke, all I could think was: I need to go there. What a terrible compulsion.  And it persists.\"",
+      "x": 242,
+      "y": 195,
+      "icon": {
+        "id": "minecraft:fire"
+      },
+      "prerequisites": [
+        "Blasting Away",
+        "Magical Steel"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "parentrequirement": 1,
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Hard as Nails",
+          "longDescription": "To mine obsidian you need a pickaxe of at least mining level 3. To determine which pickaxe is needed for this mining level, you should check your GregTech Ore Guide. The list of the mining levels of tools is listed at the end of the book. Also vanilla picks of course still work and they are better in some ways. Whilst the GregTech pickaxe uses up its durability depending on hardness of the blocks you mine, vanilla pickaxes lose only 1 durability per mined block. So mining obsidian with Diamond Pickaxe or Thaumium is a good move.",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:obsidian"
+              },
+              "required": 10
+            },
+            {
+              "item": {
+                "id": "minecraft:flint_and_steel"
+              }
+            }
+          ]
+        },
+        {
+          "type": "LOCATION",
+          "description": "Nether Realm",
+          "locations": [
+            {
+              "name": "The Nether Realm",
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "dim": -1,
+              "radius": -1
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Quartz",
+          "longDescription": "The Nether contains one of the important resources: Nether Quartz. So go and gather some.",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:quartz"
+              },
+              "required": 16
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 3
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Another Source of Water",
+      "description": "\"It occurred to me today that I might be able to fashion a glass reservoir capable of generating vast amounts of water.  This would be far superior to any water-gathering methods I\u0027ve considered thus far: everything else seems to either take too much space or accumulate water too slowly.\"",
+      "x": 199,
+      "y": 195,
+      "icon": {
+        "id": "EnderIO:blockReservoir"
+      },
+      "prerequisites": [
+        "Hell Lands",
+        "Alloying for Newbs"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Smashing Glass",
+          "longDescription": "Now that you have some quartz you should also consider crushing some glass to get glass dust. Glass dust is used for some of the glass related items, such as Glass Bottles or Fused Quartz Glass.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.01",
+                "damage": 2890
+              },
+              "required": 21,
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Molding",
+          "longDescription": "Making Bottles is bit advanced as well:  you need to make yourself a Bottle Mold and then melt down glass dust in an Alloy Smelter.  Note that the Bottle Mold will not get consumed by the process, so you can use it forever.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.01",
+                "damage": 32305
+              }
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Fusing",
+          "longDescription": "To get fused quartz you need to use your Alloy Smelter. Insert either 4x Nether Quartz or 1x Nether Quartz Block and a little bit of Glass Dust.",
+          "items": [
+            {
+              "item": {
+                "id": "EnderIO:blockFusedQuartz"
+              },
+              "required": 17
+            },
+            {
+              "item": {
+                "id": "minecraft:glass_bottle"
+              }
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Not an Aquarium",
+          "longDescription": "EnderIO Reservoirs are an excellent method for obtaining unlimited amounts of water. You need 4 of them in 2x2x1 pattern. Then put 2 buckets worth of water in it and voila... you have unlimited supplies of water. If you have a wrench (except IC2/GT), you can right click the reservoir to enable automatic output of stored water into nearby blocks.",
+          "items": [
+            {
+              "item": {
+                "id": "EnderIO:blockReservoir"
+              },
+              "required": 4
+            },
+            {
+              "item": {
+                "id": "EnderIO:blockTank"
+              }
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Yataaa!",
+          "longDescription": "Speaking of wrenches, there is a special wrench made for Ender IO machines. Its called the Yeta Wrench. There is no reason to not make it, so why not... The yeta wrench can hide all but one type of conduit from view, allowing players to easily access a specific conduit when many are stacked together. Hold down shift while moving the mouse scroll wheel to change viewing modes.",
+          "items": [
+            {
+              "item": {
+                "id": "EnderIO:itemYetaWrench"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 3
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Torching",
+      "description": "\"Is seems to me that before I arrived in this place, crafting simple torches was a much simpler affair.  Now I find I\u0027m constantly worrying about the things. If I want regular light sources, I\u0027ll need to be mindful of the various ways I can still assemble them.\"",
+      "x": 37,
+      "y": 54,
+      "icon": {
+        "id": "minecraft:torch"
+      },
+      "prerequisites": [
+        "Tooling Up"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Ways of Torches",
+          "longDescription": "Torches can be made in multiple ways. You can use the classic Coal or Charcoal + Sticks method, but also you can craft them with Sticky Resin from Rubber Trees or with Creosote (from Coke Ovens) + Wool",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:torch"
+              },
+              "required": 4
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Charcoal Pile",
+      "description": "\"The fumes hovering over my domain are a smelly but potent reminder that charcoal is now a crucial part of my industry.  I\u0027ve been experimenting with some ways of creating it with little success...until now.\"",
+      "x": 179,
+      "y": 79,
+      "icon": {
+        "id": "gregtech:gt.blockmachines",
+        "damage": 1155
+      },
+      "prerequisites": [
+        "Dust a Must"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Early Charcoal",
+          "longDescription": "Charcoal Pile Ingniter is a simple block that will allow you to turn Wooden Logs into Brittle Charcoal Blocks. It can turn up to 11x5x11 area filled with logs into Charcoal. Logs must be surrounded by Dirt or Grass, there must be no air present. That means also top must be covered by Dirt or Grass. Very bottom must be made out of Bricks.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.blockmachines",
+                "damage": 1155
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 2
+        },
+        {
+          "id": "Enchiridion2:book",
+          "nbt": "{identifier:\"GUIDE_Charcoal_Pit\"}"
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Fake!",
+      "description": "\"\"Diamonds are a war-man\u0027s best friend\". \"Diamonds are a worn-down man\u0027s best friend\". \"Diamonds are one man\u0027s best friend\". I dunno, I\u0027ll come up with something catchy. In any event, I\u0027m working on generating synthentic diamonds. They\u0027re useful for weaponry, armor, tools, electronics... I\u0027m always going through diamonds, and synthesizing them may be simpler than going to dig them up.\"",
+      "x": 274,
+      "y": 86,
+      "icon": {
+        "id": "IC2:itemPartIndustrialDiamond"
+      },
+      "prerequisites": [
+        "Double Trouble"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Them balls",
+          "longDescription": "To make Coal Balls you need to combine 8 Coal Dusts (use mortar with Coal to get) and 1 Flint.",
+          "items": [
+            {
+              "item": {
+                "id": "IC2:itemPartCoalBall"
+              },
+              "required": 8
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Ouchy Balls",
+          "longDescription": "Now you need to compress the Coal Balls in your Steam Compressor.",
+          "items": [
+            {
+              "item": {
+                "id": "IC2:itemPartCoalBlock"
+              },
+              "required": 8
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Chunky",
+          "longDescription": "Coal Chunks are the last step in making Industrial Diamonds. These are crafted with the Compressed Call Balls and Obsidian.",
+          "items": [
+            {
+              "item": {
+                "id": "IC2:itemPartCoalChunk"
+              }
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Bling-bling",
+          "longDescription": "Now just compress the Coal Chunk into the Industrial Diamond. Industrial Diamonds can be used as a replacement for normal Diamonds in most cases. In some cases, however, you will need to have pure Diamonds, so do not come to rely on this too much.",
+          "items": [
+            {
+              "item": {
+                "id": "IC2:itemPartIndustrialDiamond"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 3
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "New Ways of Tools",
+      "description": "\"I\u0027m getting better at throwing tools together. What\u0027s better is I\u0027m getting accustomed to doing so with all sorts of materials. This should be a handy skill if and when I ever identify more metals to work with.\"",
+      "x": 137,
+      "y": 52,
+      "bigicon": true,
+      "icon": {
+        "id": "minecraft:iron_pickaxe"
+      },
+      "prerequisites": [
+        "Wroar!"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Tool Heads",
+          "longDescription": "You can craft tool heads for your GregTech tools. This provides a larger variety of materials you can use and also allows you to stack potential tools in a small number of slots (instead of one tool per slot).",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.02",
+                "damage": 304
+              }
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.02",
+                "damage": 2304
+              }
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.02",
+                "damage": 1304
+              }
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.02",
+                "damage": 3304
+              }
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Difference",
+          "longDescription": "You can craft the tool head with a stick to produce a tool.  Be advised that some higher tier tools may require something more substantial than wood as a handle, such as steel.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "nbt": "{ench:[0:{lvl:2s,id:16s}],GT.ToolStats:{PrimaryMaterial:\"WroughtIron\",MaxDamage:38400L,SecondaryMaterial:\"Wood\"}}"
+              }
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 4,
+                "nbt": "{GT.ToolStats:{PrimaryMaterial:\"WroughtIron\",MaxDamage:38400L,SecondaryMaterial:\"Wood\"}}"
+              }
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 2,
+                "nbt": "{GT.ToolStats:{PrimaryMaterial:\"WroughtIron\",MaxDamage:38400L,SecondaryMaterial:\"Wood\"}}"
+              }
+            },
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 6,
+                "nbt": "{ench:[0:{lvl:2s,id:16s}],GT.ToolStats:{PrimaryMaterial:\"WroughtIron\",MaxDamage:38400L,SecondaryMaterial:\"Wood\"}}"
+              }
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Armor",
+          "longDescription": "Armor is also crafted similar to the vanilla method.  In addition to that method you\u0027ll need a Hammer, and you\u0027ll require plates instead of ingots).",
+          "items": [
+            {
+              "item": {
+                "id": "minecraft:iron_chestplate"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "IC2:itemCoin"
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Wroar!",
+      "description": "\"I\u0027m going through iron too quickly. I admire its resiliency for simple tools, but for things like pickaxes that experience a lot of wear and tear, I kind of wish it was just a little bit better. Perhaps I can treat that iron to give it a bit more durability...\"",
+      "x": 110,
+      "y": 55,
+      "icon": {
+        "id": "gregtech:gt.metaitem.01",
+        "damage": 11304
+      },
+      "prerequisites": [
+        "Handwork Tools"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "DETECT",
+          "description": "Break a Nug",
+          "longDescription": "Wrought Iron is somewhat better than Iron and is not difficult to produce.  To make this metal early on you\u0027ll need to first break your ingots into nuggets and then smelt those nuggets in a furnace.",
+          "items": [
+            {
+              "item": {
+                "id": "Thaumcraft:ItemNugget"
+              },
+              "required": 9,
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        },
+        {
+          "type": "DETECT",
+          "description": "Harden a Nug",
+          "longDescription": "After you smelt Iron Nuggets in a furnace you will get Wrought Iron Nuggets, which you can then combine in a crafting table to produce Wrought Iron Ingots.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.01",
+                "damage": 9304
+              },
+              "required": 9
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Combine a Nug",
+          "longDescription": "Wrought Iron has 50% more durability than Iron. To converse resources it is recommended to use this metal instead of Iron whenever possible.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metaitem.01",
+                "damage": 11304
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "IC2:itemCoin"
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "There is a shop in Town",
+      "description": "\"I can\u0027t actually explain where all this money is coming from. Occasionally I\u0027ll take care of a minor task and coins show up sometime after. On the floor, on a table, wherever. On the plus side, I\u0027ve given up asking myself silly questions when there\u0027s money in the offing.\"",
+      "x": 74,
+      "y": 51,
+      "bigicon": true,
+      "icon": {
+        "id": "IC2:itemCoin"
+      },
+      "prerequisites": [
+        "Tooling Up"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Easy Shopping",
+          "longDescription": "You can always combine 8 Industrial Credits of one material to make a single credit of one tier better. For instance, 8 copper Industrial Credits \u003d\u003e 1 Industrial Credit. Industrial Credits can be used in a “shop” to buy materials. Fortunately, this book is so powerful it actually functions as an interface with that shop. More information can be found in the “Shop” quest line.",
+          "items": [
+            {
+              "item": {
+                "id": "IC2:itemCoin"
+              }
+            }
+          ]
+        },
+        {
+          "type": "CRAFT",
+          "description": "Crate opener",
+          "longDescription": "Items are shipped crated, and each created contains 16 items. In order to get the items out of the crate you will need to use a Crowbar.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.metatool.01",
+                "damage": 20
+              },
+              "precision": "NBT_FUZZY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 2
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Grind That",
+      "description": "\"It is imperative that I get the best yield from my ores.  While ore veins are larger than I remember (by orders of magnitude), it is still a great deal of effort to find those veins and dig them out.  Every extra bit of dust I can grind out of my ores is a resource I won\u0027t have to seek out and dig up later.\"",
+      "x": 77,
+      "y": 176,
+      "icon": {
+        "id": "appliedenergistics2:tile.BlockGrinder"
+      },
+      "prerequisites": [
+        "Ore Annoyance"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "Manual Labour",
+          "longDescription": "You can use a Mortar to make the dusts you’ll need, but there is a more efficient method: a grind stone. To use a grind stone you need to insert a crank into it. Then put in some Ingots and right-click the crank. After a few turns of the crank the ingot will be ground to dust. There is also a chance you will produce two dusts from just one ore, but only certain ores will function in the grind stone.",
+          "items": [
+            {
+              "item": {
+                "id": "appliedenergistics2:tile.BlockGrinder"
+              }
+            },
+            {
+              "item": {
+                "id": "appliedenergistics2:tile.BlockCrank"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 3
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Manufactured Diamonds",
+      "description": "\"I think that someone will be definitely interested in these. I should try to market them up.\"",
+      "x": 271,
+      "y": 43,
+      "bigicon": true,
+      "icon": {
+        "id": "minecraft:diamond_block"
+      },
+      "prerequisites": [
+        "Fake!"
+      ],
+      "repeat": {
+        "type": "TIME",
+        "days": 4,
+        "hours": 0
+      },
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CONSUME",
+          "items": [
+            {
+              "item": {
+                "id": "IC2:itemPartIndustrialDiamond"
+              },
+              "required": 6
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32013
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "amount": 3,
+          "nbt": "{type:\"coinBagT2\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "amount": 3,
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Bronze for Charity",
+      "description": "\"Thing is, there are quite a lot of other industrialists, and they might be struggling for Bronze the same way I did. I could try to sell some of my excess Bronze to them.\"",
+      "x": 173,
+      "y": 157,
+      "bigicon": true,
+      "icon": {
+        "id": "IC2:blockMetal",
+        "damage": 2
+      },
+      "prerequisites": [
+        "Alloying for Newbs"
+      ],
+      "repeat": {
+        "type": "TIME",
+        "days": 1,
+        "hours": 0
+      },
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "CONSUME",
+          "description": "Bronzing",
+          "items": [
+            {
+              "item": {
+                "id": "IC2:blockMetal",
+                "damage": 2
+              },
+              "required": 5,
+              "precision": "ORE_DICTIONARY"
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "IC2:itemCoin",
+          "amount": 3
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBagT2\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Quest Delivery System (QDS)",
+      "description": "The Quest Delivery System (or QDS for short) can be used to submit items and fluids to a quest previously selected in the Quest Book by inserting them using any kind of transportation method, such as a Hopper, Transport Pipe or Item Conduit for items, and Fluid Pipes or Fluid Conduits for fluids. A QDS may not be useful for single items or small amounts that could be manually submitted via the Quest Book, however large quantities of items that would require multiple manual submissions can be automatically submitted this way. Fluids are also submittable only using a QDS, because they cannot be stored in a player\u0027s inventory without a container.",
+      "x": 107,
+      "y": 13,
+      "bigicon": true,
+      "icon": {
+        "id": "HardcoreQuesting:item_barrel"
+      },
+      "prerequisites": [
+        "Handwork Tools"
+      ],
+      "tasks": [
+        {
+          "type": "CRAFT",
+          "description": "QDS",
+          "items": [
+            {
+              "item": {
+                "id": "HardcoreQuesting:item_barrel"
+              }
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "EnderIO:itemLiquidConduit"
+        },
+        {
+          "id": "BuildCraft|Factory:tankBlock"
+        },
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 2
+        },
+        {
+          "id": "minecraft:hopper"
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Quest Delivery System (QDS)",
+      "description": "To submit fluids/items into the QDS you must first select the quest by clicking on the \"Select Task\" button on the relevant quest page. Then, with the Quest Book in your hand you must Right-Click on the QDS. This will bind that quest to the QDS.  Any items or fluids that subsequently enter the QDS will then count towards that quest.To send fluids into the QDS you can place it against any block which auto-outputs fluid, or pipe fluids into it.  Please be advised: GregTech pipes will *NOT* connect to the QDS Block.",
+      "x": 53,
+      "y": 13,
+      "bigicon": true,
+      "icon": {
+        "id": "minecraft:flowing_lava"
+      },
+      "prerequisites": [
+        "Quest Delivery System (QDS)"
+      ],
+      "tasks": [
+        {
+          "type": "CONSUME_QDS",
+          "description": "QDS Insertion",
+          "items": [
+            {
+              "fluid": "lava",
+              "required": 1000
+            },
+            {
+              "item": {
+                "id": "minecraft:cobblestone"
+              },
+              "required": 10
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "IC2:itemCoin"
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Higher Tier Tools",
+      "description": "\"I\u0027m finding it difficult to do the simplest mining.  Every time I find something interesting, I chip away at it with my flimsy pickaxe only to have it shatter before making an appreciable dent.  Perhaps if I choose my first ores a bit more carefully, I\u0027ll identify one that is sufficiently malleable to be broken with my tools.\"",
+      "x": 93,
+      "y": 121,
+      "icon": {
+        "id": "gregtech:gt.blockores",
+        "damage": 930
+      },
+      "prerequisites": [
+        "Tooling Up"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "DETECT",
+          "longDescription": "Obtaining better materials early on may be a bit confusing. To attain the next tier of tools your first best bet is likely Iron. To get Iron there are couple of different options: You can find Small Ores pretty much anywhere. These will give you dust or crushed ore which then you can smelt to ingots. Another good approach is to locate Limonite. Brown Limonite is soft enough for you to be able to mine it with Stone or Flint Pickaxes. This Limonite can then be smelted directly to Iron Ingots, which are higher tier, allowing you to mine other Tier 2 materials, including the other Iron types in that Limonite vein.",
+          "items": [
+            {
+              "item": {
+                "id": "gregtech:gt.blockores",
+                "damage": 930
+              },
+              "required": 10
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32011,
+          "amount": 3
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    },
+    {
+      "name": "Analyzing Crops",
+      "description": "\"I\u0027ve been scratching my head cleverly at this plant for the better part of an hour.  It has the leaves of a tulip, but I\u0027m fairly sure it\u0027s producing some sort of orange berries.  So, it can\u0027t be a tulip.  Also: it growled at me.To hell with this, I need a tool that will help me analyze these things.\"",
+      "x": 35,
+      "y": 175,
+      "icon": {
+        "id": "IC2:itemCropnalyzer",
+        "damage": 22,
+        "nbt": "{uid:-1945995901,charge:18288.0d,Items:[]}"
+      },
+      "prerequisites": [
+        "Growing Crops"
+      ],
+      "trigger": "ANTI_TRIGGER",
+      "tasks": [
+        {
+          "type": "DETECT",
+          "longDescription": "A Cropnalyzer is a very useful tool. It allows you to easily analyze your crops and gives you information about them (such as the identity of the strange crop you just crossbred). The Cropnalyzer requires power: You can use any Batteries to charge it, or later you can put it into a MV or greater Battery Buffer. Since you\u0027re currently unable to generate your own power, you should inquire in a local shop if they have any Single-Use Batteries in store.",
+          "items": [
+            {
+              "item": {
+                "id": "IC2:blockCrop"
+              },
+              "required": 50
+            }
+          ]
+        }
+      ],
+      "reward": [
+        {
+          "id": "IC2:itemCoin"
+        },
+        {
+          "id": "IC2:itemCropnalyzer",
+          "damage": 22,
+          "nbt": "{uid:-1945995901,charge:18288.0d,Items:[]}"
+        },
+        {
+          "id": "gregtech:gt.metaitem.01",
+          "damage": 32510,
+          "nbt": "{GT.ItemCharge:18000L}"
+        }
+      ],
+      "rewardchoice": [
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"coinBag\"}"
+        },
+        {
+          "id": "JsonLootBags:ItemLootBag",
+          "nbt": "{type:\"materialBag\"}"
+        }
+      ],
+      "commandrewards": []
+    }
+  ],
+  "reputationBar": []
+}
