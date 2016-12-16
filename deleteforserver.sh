@@ -1,0 +1,8 @@
+rm "mods/[1.7.10]DamageIndicatorsMod-3.2.3.jar"
+rm "mods/CustomMainMenu-MC1.7.10-1.9.2.jar"
+rm "mods/Ding-MC1.7.10v2.jar"
+rm "mods/IC2 Nei Plugin Version 1.1.0.jar"
+rm "mods/journeymap-1.7.10-5.1.4p1-unlimited.jar"
+rm "mods/MouseTweaks-2.4.4-mc1.7.10.jar"
+rm "mods/OptiFine_1.7.10_HD_U_D6.jar"
+rm "mods/ResourceLoader-1.2.jar"
