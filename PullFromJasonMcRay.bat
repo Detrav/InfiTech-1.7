@@ -1,1 +1,1 @@
-git pull https://github.com/JasonMcRay/InfiTech-1.7.git master
+git fetch https://github.com/JasonMcRay/InfiTech-1.7.git 
